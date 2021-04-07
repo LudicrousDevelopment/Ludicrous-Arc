@@ -124,6 +124,19 @@ app.use(function (req, res, next) {
 })
 
 
-config = require(__dirname + '/config.json'),
-app.listen(process.env.PORT || config.port);
-console.log(`Server is Running at localhost:${ process.env.PORT || config.port }`);
+var heroku = process.env.ONHEROKU
+if(heroku == 1) {
+
+PORT = process.env.PORT
+app.listen(PORT, () => {
+console.log(`Server is Running at localhost:${ PORT }`);
+});
+
+} else {
+config = require('./config.json'),
+PORT = config.port;
+
+app.listen(PORT, () => {
+console.log(`Server is Running at localhost:${ PORT }`);
+});
+}
