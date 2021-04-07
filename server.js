@@ -112,6 +112,14 @@ app.get('/voidnet', function(req, res){
 res.sendFile('/surfpages/VoidNet.html', { root: __dirname + '/public' });
 });
 
+app.get('/alloy', function(req, res){
+res.sendFile('/surfpages/alloy.html', { root: __dirname + '/public' });
+});
+
+app.get('/womginx', function(req, res){
+res.sendFile('/surfpages/womginx.html', { root: __dirname + '/public' });
+});
+
 app.get('/chat', function(req, res){
 res.sendFile('/pages/chatbox.html', { root: __dirname + '/public' });
 });
