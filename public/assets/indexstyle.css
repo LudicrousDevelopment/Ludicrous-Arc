@@ -145,4 +145,7 @@ footer {
   white-space: initial;
   text-align: center;
 }
+body {
+  overflow-x: hidden; 
+}
 }
