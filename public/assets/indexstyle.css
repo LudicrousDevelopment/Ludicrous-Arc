@@ -7,6 +7,7 @@
       body {
         text-align: center;
         overflow: hidden;
+        font-family: monospace;
       }
       h1 {
         text-align: center;
@@ -123,7 +124,8 @@
 footer {
     position: absolute;
     bottom: 3%;
-    width: 100%;
+    width: 60%;
+    text-align: center
 }
 .small {
   white-space: initial;
@@ -131,15 +133,16 @@ footer {
 
 @media only screen and (max-width: 600px) {
 
-  footer {
-    display: none;
-  }
   div {
-    width: 60%;
+    width: 80%;
     margin: auto;
     text-align: center;
   }
   .navbar {
     display: none;
+  }
+  p {
+    margin: auto;
+    width: 500px;
   }
 }
