@@ -105,22 +105,27 @@ res.sendFile('/pages/index.html', { root: __dirname + '/public' });
 });
 
 app.get('/play', function(req, res){
-res.sendFile('games.html', { root: __dirname + '/public/pages' });
+res.sendFile('/pages/games.html', { root: __dirname + '/public' });
 });
 
 app.get('/voidnet', function(req, res){
-res.sendFile('VoidNet.html', { root: __dirname + '/public/surfpages' });
+res.sendFile('/surfpages/VoidNet.html', { root: __dirname + '/public' });
 });
 
 app.get('/chat', function(req, res){
-res.sendFile('chatbox.html', { root: __dirname + '/public/pages' });
+res.sendFile('/pages/chatbox.html', { root: __dirname + '/public' });
 });
 
 app.get('/surf', function(req, res){
-res.sendFile('surf.html', { root: __dirname + '/public/pages' });
+res.sendFile('/pages/surf.html', { root: __dirname + '/public' });
 });
+
+app.get('/credits', function(req, res){
+res.sendFile('/pages/credits.html', { root: __dirname + '/public' });
+});
+
 app.use(function (req, res, next) {
-  res.status(404).sendFile('error.html', {root: __dirname + '/public/pages'})
+  res.status(404).sendFile('/pages/error.html', {root: __dirname + '/public'})
 })
 
 
@@ -129,8 +134,7 @@ if(heroku == 1) {
 
 PORT = process.env.PORT
 app.listen(PORT, () => {
-console.log(`Server is Running at localhost:${ PORT }`);
-});
+console.log(`Server is Running at localhost:${ PORT }`)});
 
 } else {
 config = require('./config.json'),
