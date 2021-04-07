@@ -9,15 +9,18 @@
   },
   "author": "Void Network",
   "dependencies": {
+    "alloyproxy": "^1.1.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
     "https": "^1.0.0",
+    "mime-types": "^2.1.30",
     "node-fetch": "^2.6.1",
     "react-scripts": "^4.0.3",
     "s": "^1.0.0",
     "serve": "^11.3.2",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "ws": "^7.4.4"
   },
   "engines": {
     "node": "12.11.1"

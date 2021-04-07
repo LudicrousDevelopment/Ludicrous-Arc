@@ -96,37 +96,35 @@ return;
 });
 
 
+
+
 app.use(express.static('public'))
 
 app.get('/', function(req, res){
-res.sendFile('index.html', { root: __dirname + '/public' });
+res.sendFile('/pages/index.html', { root: __dirname + '/public' });
 });
 
 app.get('/play', function(req, res){
-res.sendFile('games.html', { root: __dirname + '/public' });
+res.sendFile('games.html', { root: __dirname + '/public/pages' });
 });
 
 app.get('/voidnet', function(req, res){
 res.sendFile('VoidNet.html', { root: __dirname + '/public/surfpages' });
 });
 
+app.get('/chat', function(req, res){
+res.sendFile('chatbox.html', { root: __dirname + '/public/pages' });
+});
+
 app.get('/surf', function(req, res){
-res.sendFile('surf.html', { root: __dirname + '/public' });
+res.sendFile('surf.html', { root: __dirname + '/public/pages' });
 });
+app.use(function (req, res, next) {
+  res.status(404).sendFile('error.html', {root: __dirname + '/public/pages'})
+})
 
-var heroku = process.env.ONHEROKU
-if(heroku == 1) {
 
-PORT = process.env.PORT
-app.listen(PORT, () => {
-console.log('Server is Running at localhost:'+PORT);
-});
-
-} else {
 config = require('./config.json'),
 PORT = config.port;
-
-app.listen(PORT, () => {
+app.listen(process.env.PORT || config.port);
 console.log(`Server is Running at localhost:${ PORT }`);
-});
-}

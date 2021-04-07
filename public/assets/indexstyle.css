@@ -46,6 +46,8 @@
   margin: 4px 2px;
   transition-duration: 0.8s;
   cursor: pointer;
+  width: 115px;
+  height: 35px;
 }
 .proxybutton {
   width: 115px;
@@ -57,10 +59,8 @@
   background-color:rgb(129, 129, 129);
   color: white;
 }
-proxybuttonactive {
-  width: 115px;
-  height: 35px;
-  background-color:rgb(146, 146, 146);  
+.proxybuttonactive {
+  background-color:rgb(161, 161, 161);  
   color: white;
 }
 .gobutton {
