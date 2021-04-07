@@ -1,5 +1,5 @@
 function alloy() {
-  alert("Alloy Has Not Been Added Yet")
+document.location.href="/alloy"
 }
 function womginx() {
   alert("Womginx Has Not Been Added Yet")
