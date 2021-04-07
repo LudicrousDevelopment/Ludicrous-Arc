@@ -124,6 +124,6 @@ app.use(function (req, res, next) {
 })
 
 
-config = require('./config.json'),
+config = require(__dirname + '/config.json'),
 app.listen(process.env.PORT || config.port);
-console.log(`Server is Running at localhost:${ PORT }`);
+console.log(`Server is Running at localhost:${ process.env.PORT || config.port }`);
