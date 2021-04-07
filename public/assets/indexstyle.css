@@ -4,6 +4,12 @@
       h1 {
         color: white;
       }
+      sub {
+        color: white;
+      }
+      b {
+        color: white;
+      }
       body {
         overflow: hidden;
         font-family: monospace;
@@ -147,5 +153,6 @@ footer {
 }
 body {
   overflow-x: hidden; 
+  overflow-y: auto;
 }
 }
