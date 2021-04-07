@@ -4,13 +4,20 @@
   "description": "A Web Proxy Site Developed by the Void Network",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "voidstart": "node public/VoidNet/server.js"
   },
   "author": "Void Network",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "http": "0.0.1-security",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.1",
+    "react-scripts": "^4.0.3",
+    "s": "^1.0.0",
+    "serve": "^11.3.2",
+    "serve-favicon": "^2.5.0"
   },
   "engines": {
     "node": "12.11.1"
