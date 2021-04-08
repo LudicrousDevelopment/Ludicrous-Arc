@@ -19,6 +19,7 @@
     "mime-types": "^2.1.30",
     "node-fetch": "^2.6.1",
     "react-scripts": "^4.0.3",
+    "ruffle": "^1.1.0",
     "s": "^1.0.0",
     "serve": "^11.3.2",
     "serve-favicon": "^2.5.0",

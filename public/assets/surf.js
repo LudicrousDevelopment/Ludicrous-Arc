@@ -7,7 +7,7 @@ function womginx() {
 function voidnet() {
 document.location.href="/voidnet"
 }
-function pydodge () {
+function pydodge() {
 document.location.href="/py"
 }
 function molten() {
