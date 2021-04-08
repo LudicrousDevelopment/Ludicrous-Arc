@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <link rel="stylesheet" href="assets/indexstyle.css">
     <style>
-      .bg {
-        background: url("assets/back.gif")
-      }
       p {
         color: white;
       }
@@ -46,12 +44,12 @@
   transition-duration: 0.4s;
   cursor: pointer;
 }
-.gobutton {
+.proxybutton {
   background-color: rgb(175, 68, 149); 
   color: white; 
 }
 
-.gobutton:hover {
+.proxybutton:hover {
   background-color:rgb(95, 104, 226);
   color: white;
 }
@@ -106,7 +104,7 @@
   <body class="bg">
 <form name="check" action="#">
 <input type="text" name="url" class="input inputurl" id="url" placeholder="https://google.com">
-<button onclick="voidnetgo()" class="button gobutton">Unblock!</button>
+<button onclick="voidnetgo()" class="button proxybutton">Unblock!</button>
 </form>
     <head>
     <script src="assets/surf.js"></script>
