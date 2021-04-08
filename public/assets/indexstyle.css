@@ -129,21 +129,40 @@
   background-color: rgb(95, 104, 226)
 }
 .footer {
-  position:absolute;                 
+  position: absolute;                 
   left: 0; bottom: 0; right: 0;
 }
+.discordbutton {
+  background: url(discord.jpg);
+  width: 80px;
+  height: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  padding-right: 5px;
+  opacity: 1;
+  background-color: #30363D;
+  border: 0.4px inset rgb(92, 92, 92);
+  border-radius: 3px;
+}
+.discordbutton:hover {
+  background-color: rgb(71, 71, 71);
+  border: 1px inset rgb(99, 99, 99)
+}
+.github-button {
+
+}
+
 @media only screen and (max-width: 600px) {
   div {
-    width: 80%;
-    bottom: 5%;
-    left: 50%;
-    right: 50%;
+    text-align: center;
   }
   .navbar {
     display: none;
   }
   p {
     width: 80%;
+    margin: auto;
+    margin-bottom: 5px;
   }
   .small {
   white-space: initial;
@@ -153,4 +172,30 @@ body {
   overflow-x: hidden; 
   overflow-y: auto;
 }
+.footer {
+  position: absolute;                 
+  left: 0; bottom: 0; right: 0;
+}
+      body {
+        font-family: monospace;
+        text-align: center;
+        height: 100vh;
+        margin: 0;
+      }
+}
+
+@media only screen and (max-height: 500px) {
+  .discordbutton {
+    display: none;
+  }
+}
+@media only screen and (max-height: 475px) {
+  .github-button {
+    display: none;
+  }
+}
+@media only screen and (max-height: 425px) {
+  .p {
+    display: none;
+  }
 }

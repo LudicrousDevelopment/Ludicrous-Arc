@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "voidstart": "node public/VoidNet/server.js"
+    "setup": "python sfiles/setup.py",
+    "clean": "python sfiles/clean.py"
   },
   "author": "Void Network",
   "dependencies": {

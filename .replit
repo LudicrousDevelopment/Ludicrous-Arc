@@ -1,1 +1,1 @@
-run = "node server.js"
+run = "npm run setup"
