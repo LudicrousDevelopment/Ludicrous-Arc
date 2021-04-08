@@ -107,6 +107,10 @@ app.get('/', function(req, res){
 res.sendFile('/pages/index.html', { root: __dirname + '/public' });
 });
 
+app.get('/guide', function(req, res){
+res.sendFile('/assets/guide.html', { root: __dirname + '/public' });
+});
+
 app.get('/settings', function(req, res){
 res.sendFile('/pages/settings.html', { root: __dirname + '/public' });
 });

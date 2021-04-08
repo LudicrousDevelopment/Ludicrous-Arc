@@ -29,20 +29,20 @@
 
     <div>
 <h1>Proxies</h1>
-<p>Surf the web, free of any Web Filters!</p></pre>
+<p class="small">Surf the web, free of any Web Filters!</p></pre>
 </div>
 <!--Proxy Buttons-->
   <body>
-    <div class="navbar">
 <button onclick="alloy();" class="button proxybutton">Alloy</button>
 <button onclick="womginx();" class="button proxybutton" value="womginx">Womginx</button>
 <button onclick="voidnet();" class="button proxybutton">VoidNet</button>
 <button onclick="py();" class="button proxybutton">PyDodge</button>
-<button onclick="molten();" class="button proxybutton">Molten (Beta)</button>
-</div>
+<button style="width:120px;" onclick="molten();" class="button proxybutton">Molten (Beta)</button>
+<br><br><br>
 <div class="p">
-<h1>Not Sure Which Proxy to use?</h1>
-<p>Check Out <a style="color:white;text-decoration:none;">Our Guide to Web Proxies!</a></p>
+<h1 style="font-size:20px;">Not Sure Which Proxy to use?</h1>
+<p style="font-size:15px;">Check Out <a onclick="guide()" style="color:white;text-decoration:underline;">Our Guide to Web Proxies!</a></p>
+</div>
     <head>
     <script async src="https://arc.io/widget.min.js#Uj7TAd9Q"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -56,5 +56,10 @@
   </div>
   </div>
   </head>
+  <script>
+    function guide() {
+window.open('http://'+document.location.host+'/guide','popupad','width=400,height=400')
+}
+</script>
   </body>
 </html>
