@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "setup": "python sfiles/setup.py",
-    "clean": "python sfiles/clean.py"
+    "clean": "python sfiles/clean.py",
+    "pstart": "python sfiles/start.py"
   },
   "author": "Void Network",
   "dependencies": {

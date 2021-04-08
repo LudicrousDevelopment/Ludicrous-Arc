@@ -7,7 +7,7 @@ function womginx() {
 function voidnet() {
 document.location.href="/voidnet"
 }
-function via () {
+function pydodge () {
 document.location.href="/py"
 }
 function molten() {
@@ -33,4 +33,8 @@ var url = document.getElementById("url").value
 window.open("http://"+document.location.host+"/go?url="+url)
 return true; 
 }
+}
+function pygo() {
+  var ainput = document.getElementById('url')
+  window.location.assign('http://p.'+document.location.host+`/py/${btoa(ainput.value)}`);
 }

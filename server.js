@@ -104,6 +104,10 @@ app.get('/', function(req, res){
 res.sendFile('/pages/index.html', { root: __dirname + '/public' });
 });
 
+app.get('/home', function(req, res){
+res.sendFile('/pages/home.html', { root: __dirname + '/public' });
+});
+
 app.get('/play', function(req, res){
 res.sendFile('/pages/games.html', { root: __dirname + '/public' });
 });
@@ -114,6 +118,10 @@ res.sendFile('/surfpages/pydodge.html', { root: __dirname + '/public' });
 
 app.get('/voidnet', function(req, res){
 res.sendFile('/surfpages/VoidNet.html', { root: __dirname + '/public' });
+});
+
+app.get('/womginx', function(req, res){
+res.sendFile('/surfpages/womginx.html', { root: __dirname + '/public' });
 });
 
 app.get('/alloy', function(req, res){

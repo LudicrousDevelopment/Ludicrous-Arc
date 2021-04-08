@@ -11,4 +11,4 @@ if num == 0:
 else:
   print("Server Starting...")
   time.sleep(5)
-  os.system('npm run server')
+  os.system('npm start')
