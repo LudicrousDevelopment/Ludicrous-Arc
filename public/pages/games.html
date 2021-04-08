@@ -31,7 +31,7 @@
 <h1>Games Hub</h1>
 <p>Are your favorite game sites being blocked? Try these!</p></pre>
 </div>
-  <body>
+  <body onload="alertCookieValue()">
 <button onclick="location.href = '/flash';" class="button proxybutton">Flash Games</button>
 <button onclick="location.href = '/emulate';" class="button proxybutton">Emulators</button>
 <button onclick="location.href = '/html5';" class="button proxybutton">Html5 Games</button>
@@ -47,5 +47,15 @@
   </div>
   </div>
   </head>
+      <script>
+          const cookieValue = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('title='))
+  .split('=')[1];
+
+function alertCookieValue() {
+  document.title = cookieValue;
+}
+    </script>
   </body>
 </html>
