@@ -148,10 +148,9 @@
   background-color: rgb(71, 71, 71);
   border: 1px inset rgb(99, 99, 99)
 }
-.github-button {
+@media only screen and (min-width: 600px) {
 
 }
-
 @media only screen and (max-width: 600px) {
   div {
     text-align: center;
@@ -163,6 +162,7 @@
     width: 80%;
     margin: auto;
     margin-bottom: 5px;
+    font-size: 15px;
   }
   .small {
   white-space: initial;
@@ -182,19 +182,26 @@ body {
         height: 100vh;
         margin: 0;
       }
+.gobutton {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(24, 24, 24); 
+  color: rgb(255, 255, 255);
+  font-size: 10px; 
+}
 }
 
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 540px) {
   .discordbutton {
     display: none;
   }
 }
-@media only screen and (max-height: 475px) {
+@media only screen and (max-height: 510px) {
   .github-button {
     display: none;
   }
 }
-@media only screen and (max-height: 425px) {
+@media only screen and (max-height: 475px) {
   .p {
     display: none;
   }

@@ -108,6 +108,10 @@ app.get('/play', function(req, res){
 res.sendFile('/pages/games.html', { root: __dirname + '/public' });
 });
 
+app.get('/py', function(req, res){
+res.sendFile('/surfpages/pydodge.html', { root: __dirname + '/public' });
+});
+
 app.get('/voidnet', function(req, res){
 res.sendFile('/surfpages/VoidNet.html', { root: __dirname + '/public' });
 });
