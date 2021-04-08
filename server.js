@@ -17,6 +17,8 @@ let test;
 let url2;
 let path2;
 
+// VOIDNET
+
 app.get('/go', function(req, res){
     url = req.query.url;
     url2 = req.query.url;
@@ -95,13 +97,26 @@ return;
     });
 });
 
+// PAGE NAVIGATION //
 
-
+// The Following Code is for the Main Pages
 
 app.use(express.static('public'))
 
 app.get('/', function(req, res){
 res.sendFile('/pages/index.html', { root: __dirname + '/public' });
+});
+
+app.get('/surf', function(req, res){
+res.sendFile('/pages/surf.html', { root: __dirname + '/public' });
+});
+
+app.get('/credits', function(req, res){
+res.sendFile('/pages/credits.html', { root: __dirname + '/public' });
+});
+
+app.get('/chat', function(req, res){
+res.sendFile('/pages/chatbox.html', { root: __dirname + '/public' });
 });
 
 app.get('/home', function(req, res){
@@ -111,6 +126,8 @@ res.sendFile('/pages/home.html', { root: __dirname + '/public' });
 app.get('/play', function(req, res){
 res.sendFile('/pages/games.html', { root: __dirname + '/public' });
 });
+
+// Proxy Pages
 
 app.get('/py', function(req, res){
 res.sendFile('/surfpages/pydodge.html', { root: __dirname + '/public' });
@@ -128,26 +145,31 @@ app.get('/alloy', function(req, res){
 res.sendFile('/surfpages/alloy.html', { root: __dirname + '/public' });
 });
 
-app.get('/womginx', function(req, res){
-res.sendFile('/surfpages/womginx.html', { root: __dirname + '/public' });
+// Games
+
+app.get('/flash', function(req, res){
+res.sendFile('/gpages/flash.html', { root: __dirname + '/public' });
 });
 
-app.get('/chat', function(req, res){
-res.sendFile('/pages/chatbox.html', { root: __dirname + '/public' });
+app.get('/emulate', function(req, res){
+res.sendFile('/gpages/emulators.html', { root: __dirname + '/public' });
 });
 
-app.get('/surf', function(req, res){
-res.sendFile('/pages/surf.html', { root: __dirname + '/public' });
+app.get('/flashem', function(req, res){
+res.sendFile('/gpages/emulators/ruffle/index.html', { root: __dirname + '/public' });
 });
 
-app.get('/credits', function(req, res){
-res.sendFile('/pages/credits.html', { root: __dirname + '/public' });
+app.get('/html5', function(req, res){
+res.sendFile('/gpages/html5.html', { root: __dirname + '/public' });
 });
+
+// 404 Page
 
 app.use(function (req, res, next) {
   res.status(404).sendFile('/pages/error.html', {root: __dirname + '/public'})
 })
 
+// DEPLOYMENT
 
 var heroku = process.env.ONHEROKU
 if(heroku == 1) {

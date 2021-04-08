@@ -20,7 +20,7 @@ Next, CD Into the Repository
 Thirdly, run NPM
 `npm i | npm install`
 *Set Up*
-`npm run setup`
+`npm run pstart`
 *Start The Server*
 `npm start`
 
