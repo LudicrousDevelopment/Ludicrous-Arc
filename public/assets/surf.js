@@ -36,5 +36,5 @@ return true;
 }
 function pygo() {
   var ainput = document.getElementById('url')
-  window.location.assign('http://p.'+document.location.host+`/py/${btoa(ainput.value)}`);
+  window.location.assign('http://p.'+document.location.host+`/py/${ ainput.value }`);
 }
