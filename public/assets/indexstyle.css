@@ -39,7 +39,7 @@
         margin-bottom: 10px;
       }
       body{
-        background-image: url('../assets/back.gif');
+        background: #202020;
         height: 100%;
       }
       .button {
@@ -148,6 +148,9 @@
   background-color: rgb(71, 71, 71);
   border: 1px inset rgb(99, 99, 99)
 }
+input {
+  margin-top: 10px;
+}
 @media only screen and (min-width: 600px) {
 
 }
@@ -204,5 +207,12 @@ body {
 @media only screen and (max-height: 475px) {
   .p {
     display: none;
+  }
+}
+
+@media only screen and (max-height: 620) {
+  body {
+    overflow-x: auto;
+    overflow-y: auto;
   }
 }

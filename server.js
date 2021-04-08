@@ -107,6 +107,10 @@ app.get('/', function(req, res){
 res.sendFile('/pages/index.html', { root: __dirname + '/public' });
 });
 
+app.get('/settings', function(req, res){
+res.sendFile('/pages/settings.html', { root: __dirname + '/public' });
+});
+
 app.get('/surf', function(req, res){
 res.sendFile('/pages/surf.html', { root: __dirname + '/public' });
 });
