@@ -2,7 +2,7 @@ function alloy() {
 document.location.href="/alloy"
 }
 function womginx() {
-  alert("Womginx Has Not Been Added Yet")
+document.location.href="/womginx"
 }
 function voidnet() {
 document.location.href="/voidnet"
@@ -18,7 +18,8 @@ var ainput = document.getElementById('url')
 window.location.assign('http://a.'+document.location.host+`/prox/?url=${btoa(ainput.value)}`);
 }
 function womginxgo() {
-
+var url = document.getElementById("url").value
+window.location.assign("http://w."+document.location.host+"/main/"+url)
 }
 function voidnetgo() {
 var empt = document.check.url.value;
@@ -30,8 +31,7 @@ return false;
 else 
 {
 var url = document.getElementById("url").value
-window.open("http://"+document.location.host+"/go?url="+url)
-return true; 
+window.location.assign("http://"+document.location.host+"/go?url="+url)
 }
 }
 function pygo() {

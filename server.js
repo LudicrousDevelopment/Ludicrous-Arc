@@ -145,6 +145,10 @@ app.get('/alloy', function(req, res){
 res.sendFile('/surfpages/alloy.html', { root: __dirname + '/public' });
 });
 
+app.get('/search', function(req, res){
+res.sendFile('/pages/search.html', { root: __dirname + '/public' });
+});
+
 // Games
 
 app.get('/flash', function(req, res){
@@ -168,6 +172,7 @@ res.sendFile('/gpages/html5.html', { root: __dirname + '/public' });
 app.use(function (req, res, next) {
   res.status(404).sendFile('/pages/error.html', {root: __dirname + '/public'})
 })
+
 
 // DEPLOYMENT
 
