@@ -53,7 +53,12 @@ var favicon = {
 function alertCookieValue() {
   document.title = cookieValue;
   favicon.change(cookieValue2)
-}
+
+    var timer = setInterval(dis, 1000);
+
+  function dis() {
+  document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
+}}
       function co() {
         document.cookie="title=Ludicrous";
         document.title = "Ludicrous";
@@ -63,6 +68,7 @@ function alertCookieValue() {
       function favco() {
       var fa = document.getElementById('favurl').value
       document.cookie="favicon="+fa;
+      favicon.change(document.getElementById('favurl').value);
       }
 
 document.addEventListener("keyup", function(event) {
@@ -78,12 +84,4 @@ document.addEventListener("keyup", function(event) {
   }
 });
 
-function start() {
-var timer = setInterval(dis, 1000);
-
-function dis() {
-document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
-}};
-
 window.onload = alertCookieValue;
-window.onload = start;

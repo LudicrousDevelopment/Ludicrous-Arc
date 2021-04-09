@@ -168,7 +168,7 @@ res.sendFile('/gpages/emulators.html', { root: __dirname + '/public' });
 });
 
 app.get('/flashem', function(req, res){
-res.sendFile('/gpages/emulators/ruffle/index.html', { root: __dirname + '/public' });
+res.sendFile('/gpages/emulators/ruffle/ruffle.html', { root: __dirname + '/public' });
 });
 
 app.get('/html5', function(req, res){
