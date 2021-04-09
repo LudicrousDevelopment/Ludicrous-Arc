@@ -85,5 +85,5 @@ function dis() {
 document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
 }};
 
-window.onload = start;
 window.onload = alertCookieValue;
+window.onload = start;

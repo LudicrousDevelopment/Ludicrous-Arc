@@ -192,7 +192,7 @@ app.listen(PORT, () => {
 console.log(`Server is Running at localhost:${ PORT }`)});
 
 } else {
-config = require('./config.json'),
+config = require(__dirname + '/config.json'),
 PORT = config.port;
 
 app.listen(PORT, () => {
