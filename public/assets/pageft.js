@@ -77,3 +77,13 @@ document.addEventListener("keyup", function(event) {
       document.cookie="favicon="+document.getElementById('favurl').value;
   }
 });
+
+function start() {
+var timer = setInterval(dis, 1000);
+
+function dis() {
+document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
+}};
+
+window.onload = start;
+window.onload = alertCookieValue;

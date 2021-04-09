@@ -158,7 +158,30 @@ input {
   right: 0;
   top: 2%;
 }
-
+.settingbutton {
+  background-color: rgb(24, 24, 24); 
+  color: rgb(255, 255, 255); 
+}
+.settingbutton:hover {
+  background-color:rgb(129, 129, 129);
+  color: white;
+}
+.settingbutton::placeholder {
+  color: lightgray;
+}
+      .sbutton {
+  border-width: 1px;
+  border-radius: 5px;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.8s;
+  cursor: pointer;
+}
 @media only screen and (max-width: 600px) {
   div {
     text-align: center;

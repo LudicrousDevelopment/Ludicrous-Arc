@@ -27,29 +27,41 @@
 <button onclick="location.href = '/surf';" class="button proxybutton">Web Proxies</button>
 <button onclick="location.href = '/play';" class="button proxybutton">Games</button>
 <button onclick="location.href = '/chat';" class="button proxybutton">Chatbox</button>
-<button class="button proxybuttonactive">Credits</button>
-<button class="button proxybutton">Settings</button>
+<button onclick="location.href = '/credits';" class="button proxybutton">Credits</button>
+<button class="button proxybuttonactive">Settings</button><br>
 </div>
-<body onload="alertCookieValue()">
+<body onload="alertCookieValue(); start();">
 <pre>
 
     <div></pre>
-<h1>Settings</h1>
-<button onclick="co();">Clear Favicon and Title</button>
+<h1>Settings</h1><br>
+<button class="sbutton settingbutton" onclick="co();">Clear Favicon and Title</button>
 <p>Set Page Favicon</p>
-<input id="favurl" placeholder="Image URL">
-<button onclick="favco(); favicon.change(document.getElementById('favurl').value);">Set Favicon</button>
+<input class="sbutton settingbutton" id="favurl" placeholder="Image URL">
+<button class="sbutton settingbutton" onclick="favco(); favicon.change(document.getElementById('favurl').value);">Set Favicon</button>
   <br>
   <p>Set Page Title</p>
-  <br>
-  <input placeholder="Title" id="tchange">
-  <button onclick="titlechange()">Set Title</button>
+  
+  <input class="sbutton settingbutton" placeholder="Title" id="tchange">
+  <button class="sbutton settingbutton" onclick="titlechange()">Set Title</button><br><br>
+  <p id="titdis">Current Page Title: </p>
+  <button class="sbutton settingbutton" onclick="start()">Update</button>
 </div>
 
     <head>
-    <script src="assets/pageft.js"></script>
     <script async src="https://arc.io/widget.min.js#Uj7TAd9Q"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-</head>
+<footer class="footer">
+  <p class="p">Made by EnderKingJ and Karlee Rae</p>
+  <div class="github-button">
+<a class="github-button" href="https://github.com/voidnetwork-dev/Ludicrous" data-color-scheme="no-preference: dark; light: light; dark: dark_dimmed;" data-size="large">GitHub</a><br></div>
+<button onclick="window.open('https://discord.gg/qn4bGpxYPC')" class="discordbutton"></button>
+  </footer>
+  </div>
+  </div>
+  </head>
+<script src="assets/pageft.js"></script>
   </body>
 </html>
+
+
