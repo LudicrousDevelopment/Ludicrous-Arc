@@ -18,7 +18,7 @@
       p {
         font-size: 25px;
       }
-    </style>
+    </style>    
     </head>
     <!--Nav Bar-->
      <pre><h4></h4><br></pre>
@@ -30,50 +30,26 @@
 <button class="button proxybuttonactive">Credits</button>
 <button class="button proxybutton">Settings</button>
 </div>
+<body onload="alertCookieValue()">
 <pre>
 
     <div></pre>
 <h1>Settings</h1>
-<br>
+<button onclick="co();">Clear Favicon and Title</button>
 <p>Set Page Favicon</p>
-<input placeholder="Image URL">
-<button onclick="fc()">Set Favicon</button>
+<input id="favurl" placeholder="Image URL">
+<button onclick="favco(); favicon.change(document.getElementById('favurl').value);">Set Favicon</button>
   <br>
   <p>Set Page Title</p>
   <br>
   <input placeholder="Title" id="tchange">
   <button onclick="titlechange()">Set Title</button>
-  <p>sexyduceduce#6722 - Alloy Developer</p>
-  <br><br>
-  <p>Bianary Person - Womginx Developer</p>
-  <br><br>
-  <p>ZDC5a, Karlee Rae, EnderKingJ - VoidNet Developers</p>
-  <br><br>
-  <del><p>uh - Molten Developers</p></del>
 </div>
-  <body onload="alertCookieValue()">
-    <head>
-    <script>
-    function titlechange() {
-     var paget = document.getElementById("tchange").value
-     document.title = paget
-     document.cookie="title" + "=" + paget;
-    }
-    </script>
-    <script>
-          const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('title='))
-  .split('=')[1];
 
-function alertCookieValue() {
-  document.title = cookieValue;
-}
-    </script>
+    <head>
     <script src="assets/pageft.js"></script>
     <script async src="https://arc.io/widget.min.js#Uj7TAd9Q"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="assets/pageft.js"></script>
 </head>
   </body>
 </html>
