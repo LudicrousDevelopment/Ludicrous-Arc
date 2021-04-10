@@ -1,8 +1,8 @@
-**Ludicrous**
+# Ludicrous
 
 Ludicrous is an upcoming web proxy site.
 
-**Dependencies**
+**Dependencies:**
 
 First, [Install Git](https://git-scm.com/downloads)
 
@@ -15,7 +15,7 @@ And you Should be all set to run Ludicrous!
 **Setup:**
 
 First, Clone the Repository
-`git clone https://github.com/enderkingj/ludicrous`
+`git clone https://github.com/VoidNetwork-dev/Ludicrous`
 
 Next, CD Into the Repository
 `cd ludicrous`
