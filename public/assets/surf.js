@@ -39,3 +39,5 @@ function pygo() {
   var ainput = document.getElementById('url')
   window.location.assign('http://p.'+document.location.host+`/py/${ ainput.value }`);
 }
+
+window.onload = document.cookie="womginx_are_you_a_bot=no";

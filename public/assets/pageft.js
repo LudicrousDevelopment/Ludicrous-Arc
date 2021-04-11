@@ -53,12 +53,15 @@ var favicon = {
 function alertCookieValue() {
   document.title = cookieValue;
   favicon.change(cookieValue2)
+  var timer = setInterval(dis, 1000);
+  dis();
 
-    var timer = setInterval(dis, 1000);
 
+
+}
   function dis() {
   document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
-}}
+}
       function co() {
         document.cookie="title=Ludicrous";
         document.title = "Ludicrous";
@@ -84,4 +87,4 @@ document.addEventListener("keyup", function(event) {
   }
 });
 
-window.onload = alertCookieValue;
+window.onload = alertCookieValue();
