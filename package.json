@@ -27,5 +27,12 @@
   },
   "engines": {
     "node": "12.11.1"
-  }
+  },
+  "keywords": [
+    "proxy",
+    "web proxy",
+    "ludicrous unblocker",
+    "unblock",
+    "iboss"
+  ]
 }
