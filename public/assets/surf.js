@@ -23,18 +23,11 @@ document.cookie = "womginx_are_you_a_bot=no";
 window.location.assign("http://w."+document.location.host+"/main/"+url)
 }
 function voidnetgo() {
-var empt = document.check.url.value;
-if (empt === "")
-{
-alert("Please Provide a URL.");
-return false;
-}
-else 
-{
+
 var url = document.getElementById("url").value
-window.location.assign("http://"+document.location.host+"/go?url="+url)
+window.location.assign("http://"+document.location.hostname+"/go?url="+url)
 }
-}
+
 function pygo() {
   var ainput = document.getElementById('url')
   window.location.assign('http://p.'+document.location.host+`/py/${ ainput.value }`);
