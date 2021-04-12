@@ -19,7 +19,7 @@ window.location.assign('http://a.'+document.location.host+`/prox/?url=${btoa(ain
 }
 function womginxgo() {
 var url = document.getElementById("url").value
-document.cookie = "womginx_are_you_a_bot=no;path=/;domain=w."+document.location.host;
+document.cookie = "womginx_are_you_a_bot=no";
 window.location.assign("http://w."+document.location.host+"/main/"+url)
 }
 function voidnetgo() {
