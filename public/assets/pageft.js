@@ -35,50 +35,29 @@ var favicon = {
 
         function titlechange() {
      var paget = document.getElementById("tchange").value
-     document.title = paget
-     document.cookie="title" + "=" + paget;
+     document.title = paget;
+     localStorage.setItem('title', paget);
     }
-          const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('title='))
-  .split('=')[1];
 
-            const cookieValue2 = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('favicon='))
-  .split('=')[1];
-
-
-
-function alertCookieValue() {
-  document.title = cookieValue;
-  favicon.change(cookieValue2)
-  var timer = setInterval(dis, 1000);
-  dis();
-
-
-
-}
-  function dis() {
-  document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
+function favTitle() {
+  const title = localStorage.getItem('title');
+  const faviconurl = localStorage.getItem('faviconurl');
+  document.title = title;
+  favicon.change(faviconurl);
+    document.getElementById('titdis').innerHTML = 'Current Page Title: '+document.title
 }
       function co() {
-        document.cookie="title=Ludicrous";
+        localStorage.setItem('title', "Ludicrous");
         document.title = "Ludicrous";
-        document.cookie="favicon=assets/favicon.jpg";
+        localStorage.setItem('faviconurl', 'assets/favicon.jpg');
         favicon.change('assets/favicon.jpg')
       }
       function favco() {
       var fa = document.getElementById('favurl').value
-      document.cookie="favicon="+fa;
+      localStorage.setItem('faviconurl', fa);
       favicon.change(document.getElementById('favurl').value);
       }
 
-document.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-
-  }
-});
 document.addEventListener("keyup", function(event) {
   if (event.code === 'Enter') {
       titlechange()
@@ -87,4 +66,4 @@ document.addEventListener("keyup", function(event) {
   }
 });
 
-window.onload = alertCookieValue();
+window.onload = favTitle();

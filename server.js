@@ -159,12 +159,12 @@ res.sendFile('/pages/search.html', { root: __dirname + '/public' });
 
 // Games
 
-app.get('/flash', function(req, res){
-res.sendFile('/gpages/flash.html', { root: __dirname + '/public' });
+app.get('/games', function(req, res){
+res.sendFile('/gpages/games.html', { root: __dirname + '/public' });
 });
 
 app.get('/emulate', function(req, res){
-res.sendFile('/gpages/emulators.html', { root: __dirname + '/public' });
+res.sendFile('/gpages/assets/css/gfiles/rarch/index.html', { root: __dirname + '/public' });
 });
 
 app.get('/flashem', function(req, res){

@@ -17,10 +17,15 @@
 <button class="button proxybuttonactive">Web Proxies</button>
 <button onclick="location.href = '/play';" class="button proxybutton">Games</button>
 <button onclick="location.href = '/chat';" class="button proxybutton">Chatbox</button>
-<button onclick="location.href = '/credits';" class="button proxybutton">Credits</button>
 <button onclick="location.href = '/settings';" class="button proxybutton">Settings</button>
 </div>
 <pre>
+
+
+
+
+
+
 
 
 
@@ -39,24 +44,32 @@
 <button onclick="py();" class="button proxybutton">PyDodge</button>
 <button style="width:120px;" onclick="molten();" class="button proxybutton">Molten (Beta)</button>
 <br><br><br>
-<div class="p">
-<h1 style="font-size:20px;">Not Sure Which Proxy to use?</h1>
-<p style="font-size:15px;">Check Out <a onclick="guide()" style="color:white;text-decoration:underline;">Our Guide to Web Proxies!</a></p>
-</div>
     <head>
     <script src="assets/pageft.js"></script>
     <script async src="https://arc.io/widget.min.js#Uj7TAd9Q"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="assets/surf.js"></script>
 <footer class="footer">
+  <div class="footerspan">
   <p class="p">Made by EnderKingJ and Karlee Rae</p>
-  <div class="github-button">
-<a class="github-button" href="https://github.com/voidnetwork-dev/Ludicrous" data-color-scheme="no-preference: dark; light: light; dark: dark_dimmed;" data-size="large">GitHub</a><br></div>
-<button onclick="window.open('https://discord.gg/qn4bGpxYPC')" class="discordbutton"></button>
+
+  <button class="githubbutton" style="background-size:contain;background-repeat:no-repeat;position:absolute;bottom:22%;margin:auto;"  onclick="window.open('https://github.com/voidnetwork-dev/ludicrous')"><img src="/assets/github.png" class="gimg"></img></button>  
+
+<div style="margin-left:40%;">
+
+  <button onclick="window.open('https://discord.gg/qn4bGpxYPC')" class="nodiscordbutton"><strong>Discord</strong></button>
+    <button onclick="window.open('https://github.com/titaniumnetwork-dev/')" class="nodiscordbutton"><strong>TN</strong></button>
+  <br>
+<button onclick="location.href = '/credits'" class="nodiscordbutton" style="margin-bottom:20px;"><strong>Credits</strong></button>
+    <button onclick="window.open('https://github.com/titaniumnetwork-dev/molten')" class="nodiscordbutton"><strong>Molten</strong></button>
+    </div>
+</div>
   </footer>
   </div>
   </div>
   </head>
+<script src="assets/pageft.js"></script>
+  </body>
+</html>
   <script>
     function guide() {
 window.open('http://'+document.location.host+'/guide','popupad','width=400,height=400')
@@ -72,5 +85,3 @@ function alertCookieValue() {
   document.title = cookieValue;
 }
     </script>
-  </body>
-</html>

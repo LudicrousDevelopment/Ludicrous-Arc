@@ -11,11 +11,19 @@
         color: white;
       }
       body {
+        overflow-x: hidden; 
+        overflow-y: auto;
+      }
+      p {
+        font-size: 20px;
+      }
+      html, body {
+        min-width: 1140px;
         overflow: hidden;
         font-family: monospace;
         text-align: center;
-        height: 100vh;
-        margin: 0;
+        margin:0;
+        padding:0;
       }
       h1 {
         text-align: center;
@@ -26,6 +34,12 @@
         margin-bottom: 0;
         color: white;
         font-size: 25px;
+      }
+      .p {
+        color: white;
+        position: absolute;
+        bottom: 20%;
+        left: 14%;
       }
       p {
         font-size: 20px;
@@ -42,8 +56,20 @@
         background: #202020;
         height: 100%;
       }
+      .logodiv {
+        width: 185px;
+        height: 55.44px;
+        position: absolute;
+        left: 20%;
+        top: 0.5%;
+        -webkit-transition: color 0.5s, width 0.5s;
+        transition: color 0.5s, width 0.5s;
+      }
+      .logodiv:hover {
+        cursor: pointer;
+        width: 190px;
+      }
       .button {
-  border-width: 1px;
   border-radius: 5px;
   color: white;
   padding: 4px 8px;
@@ -56,26 +82,77 @@
   cursor: pointer;
   width: 115px;
   height: 35px;
+  border: solid;
 }
 .proxybutton {
+  background: none;
   width: 130px;
   height: 35px;
-  background-color: rgb(24, 24, 24); 
   color: rgb(255, 255, 255); 
+  border: solid;
 }
 .proxybutton:hover {
-  background-color:rgb(129, 129, 129);
-  color: white;
+  background: none;
+  color: #4057C8;
 }
-.proxybuttonactive {
-  background-color:rgb(161, 161, 161);  
-  color: white;
+.proxybutton:active {
+  background: none;
+  color: #4057C8;
+}
+.navbutton {
+  border: none;
+  width: 110px;
+  color: rgb(255, 255, 255); 
+  background: none;
+  -webkit-transition: color 0.5s, font-size 0.5s;
+  transition: color 0.5s, font-size 0.5s;
+  font-size: 16px;
+  padding-bottom: 10px;
+  height: 65px;
+  margin-top: -8px;
+}
+.wpb {
+  width: 130px;
+}
+.navbutton:hover {
+  color: #4057C8;
+  font-size: 17px;
+}
+.nbactive {
+  color: rgb(45, 59, 122);
+  background: none;
+  border: none
+}
+.nbactive:hover {
+  color: rgb(45, 59, 122);
 }
 .gobutton {
-  width: 150px;
-  height: 50px;
-  background-color: rgb(24, 24, 24); 
+  background: none;
   color: rgb(255, 255, 255); 
+  border: solid;
+  transition: 0.4s;
+  width: 175px;
+  height: 50px;
+  font-size: 18px;
+}
+.gobutton:hover {
+  background: none;
+  color: #7289DA;
+  -webkit-transition: color ease-in 0.5s;
+  transition: color ease-in 0.5s;
+}
+.gobutton:hover::placeholder {
+  background: none;
+  color: #7289DA;
+  -webkit-transition: color ease-in-out 0.5s;
+  transition: color ease-in-out 0.5s;
+}
+.sinput {
+  border: 1px solid white 5px;
+}
+.gobutton:focus {
+  background: none;
+  color: #7289DA;
 }
 .gobutton::after {
   content: "Unblock Now!";
@@ -83,11 +160,6 @@
 
 .gobutton:hover::after {
   content: "Great!";
-}
-
-.gobutton:hover {
-  background-color:rgb(190, 190, 190);
-  color: white;
 }
 @keyframes fadeInAnimation {
     0% {
@@ -117,6 +189,7 @@
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border: solid;
 }
 .inputurl {
   background-color: rgb(124, 124, 124); 
@@ -131,22 +204,46 @@
 .footer {
   position: absolute;                 
   left: 0; bottom: 0; right: 0;
+  padding: 0 0;
 }
-.discordbutton {
-  background: url(https://ludicrous.gq/assets/discord.jpg);
+.footerspan {
+  border-top-width: 2px;
+  border-top-color: #7289DA;
+  border-top-style: solid;
+  background: #2e2e2e;
+  padding-top: 0;
+  height: 94px;
+  text-align: center;
+}
+.nodiscordbutton {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
   width: 80px;
   height: 28px;
-  margin-bottom: 15px;
   text-align: center;
-  padding-right: 5px;
   opacity: 1;
   background-color: #30363D;
-  border: 0.4px inset rgb(92, 92, 92);
+  border: 0.4px solid rgb(92, 92, 92);
   border-radius: 3px;
+  margin-bottom:5px;
+  margin-left: 150px;
 }
-.discordbutton:hover {
+.nodiscordbutton:hover {
   background-color: rgb(71, 71, 71);
-  border: 1px inset rgb(99, 99, 99)
+  border: 1px solid rgb(99, 99, 99)
+}
+.githubbutton {
+  color: #7289DA;
+  width: 28px;
+  height: 28px;
+  background-color: #30363D;
+  border: 0.4px solid rgb(92, 92, 92);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.githubbutton:hover {
+  background-color: rgb(71, 71, 71);
+  border: 1px solid rgb(99, 99, 99)
 }
 input {
   margin-top: 10px;
@@ -154,20 +251,47 @@ input {
 
 .navbar {
   position: absolute;
-  left: 0;
+  text-align: left;
+  left: 50%;
   right: 0;
-  top: 0%;
+  top: 1.4%;
+  height: 35px;
+}
+#nav {
+  border-bottom-style: solid;
+  border-bottom-color: #4057C8;
+  border-bottom-width: 2px;
+  height: 65px;
+  background: #2c2c2c;
 }
 .settingbutton {
-  background-color: rgb(24, 24, 24); 
+  background: none;
+  width: 130px;
+  height: 35px;
   color: rgb(255, 255, 255); 
+  border: solid;
 }
 .settingbutton:hover {
-  background-color:rgb(129, 129, 129);
-  color: white;
+  background: none;
+  color: #7289DA;
+  -webkit-transition: color ease-in 0.5s;
+  transition: color ease-in 0.5s;
 }
-.settingbutton::placeholder {
-  color: lightgray;
+.settingbutton:hover::placeholder {
+  background: none;
+  color: #7289DA;
+  -webkit-transition: color ease-in-out 0.5s;
+  transition: color ease-in-out 0.5s;
+}
+.sinput {
+  border: 1px solid white 5px;
+}
+.settingbutton:focus::placeholder {
+  color: #7289DA;
+}
+.settingbutton:focus {
+  background: none;
+  color: #7289DA;
 }
       .sbutton {
   border-width: 1px;
@@ -182,11 +306,37 @@ input {
   transition-duration: 0.8s;
   cursor: pointer;
 }
+.gdb {
+  text-align: center;
+}
+.gimg {
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.p {
+  margin-bottom: 10px;
+}
 @media only screen and (max-width: 600px) {
   div {
     text-align: center;
   }
   .navbar {
+    display: none;
+  }
+  .navbutton {
+    display: none;
+  }
+  .navbuttonactive {
+    display: none;
+  }
+  .logodiv {
     display: none;
   }
   p {
@@ -197,7 +347,6 @@ input {
   }
   .small {
   white-space: initial;
-  text-align: center;
 }
 body {
   overflow-x: hidden; 
@@ -238,7 +387,7 @@ body {
   }
 }
 @media only screen and (max-height: 510px) {
-  .github-button {
+  .githubbutton {
     display: none;
   }
 }

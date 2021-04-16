@@ -23,14 +23,13 @@ document.cookie = "womginx_are_you_a_bot=no";
 window.location.assign("http://w."+document.location.host+"/main/"+url)
 }
 function voidnetgo() {
-
 var url = document.getElementById("url").value
-window.location.assign("http://"+document.location.hostname+"/go?url="+url)
+document.location = "https://"+document.location.hostname+"/go?url="+url;
 }
 
 function pygo() {
   var ainput = document.getElementById('url')
-  window.location.assign('http://p.'+document.location.host+`/py/${ ainput.value }`);
+  window.location.assign('http://p.'+document.location.host+`/course/${ ainput.value }`);
 }
 
 window.onload = document.cookie="womginx_are_you_a_bot=no";

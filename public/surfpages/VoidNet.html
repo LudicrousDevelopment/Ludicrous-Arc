@@ -79,6 +79,9 @@
 .inputurl:focus {
   background-color: rgb(95, 104, 226)
 }
+#vnframe {
+  display: none;
+}
     </style>
   <title>VoidNet</title>
     
@@ -88,7 +91,7 @@
     <meta name="description" content="Bypass Internet Filters Put In Place By Schools OR The Work Place" />
     <meta name="theme-color" content="#0d0d0d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+    </head><div id="hide2">
          <div class="navbar">
      <button onclick="location.href = '/home';" class="button proxybutton">Home</button>
 <button onclick="location.href = '/surf';" class="button proxybuttonactive">Web Proxies</button>
@@ -104,22 +107,40 @@
 
 
   <pre>
-    <div>
 <img width="200px" height="200px" src="assets/voidnet.jpg">
 <h1>VoidNet</h1>
 <p class="small">A Lightweight Web Proxy Developed by <br>the Void Network</p>
-</div>
+
   <body class="bg">
 <input style="width:200px;height:35px;" type="text" name="url" class="input inputurl" id="url" placeholder="https://google.com">
 <button onclick="voidnetgo()" class="button proxybutton">Unblock!</button>
+<iframe
+  src=""
+  style="
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
+    height: 100%;
+    "
+  id="vnframe">
+</iframe>
     <head>
     <script src="assets/surf.js"></script>
     <script async src="https://arc.io/widget.min.js#Uj7TAd9Q"></script>
 </head>
 <footer>
+  <div id="hide">
   <br><br><br><br>
   <p>Made by EnderKingJ, Karlee Rae, and ZDC54.</p>
   <a class="github-button" href="https://github.com/EnderKingJ/VoidNet/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork EnderKingJ/VoidNet on GitHub">Fork on Github</a><br>
+  </div>
   </footer>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
