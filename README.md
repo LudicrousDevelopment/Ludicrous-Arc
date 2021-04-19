@@ -1,4 +1,4 @@
-###Ludicrous
+#Ludicrous
 
 Ludicrous is an upcoming web proxy site.
 
